@@ -1,4 +1,0 @@
-TTR
-===
-
-Tischtennis TTR Rechner
