@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class Day{
 
+	/* On a day, there can be several games */
 	private ArrayList<SingleGame> games;
+	/* The player has a fix TTR for each day. The new TTR is calculated overnight. Same is valid for ChangeConstant and Nachwuchsausgleich */
 	private Integer ttr;
 	private Integer changeConstant;
 	private Integer nachwuchsausgleich;
@@ -75,6 +77,7 @@ public class Day{
 		
 		for (SingleGame game : games) {
 
+			/* Refer to http://www.bttv.de/fileadmin/bttv/media/000/mannschaft/click-tt/TTRL/20120515_Kurzbeschreibung_TTRL.pdf */
 			if (game.getOpponentTTR() != 0) {
 				expectedResult += (1 / (1 + Math.pow(10,
 						(((double)game.getOpponentTTR() - ttr) / 150))));
